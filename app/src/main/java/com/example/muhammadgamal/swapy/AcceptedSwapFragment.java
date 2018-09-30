@@ -13,6 +13,7 @@ public class AcceptedSwapFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Accepted swap requests");
         return inflater.inflate(R.layout.fragment_accepted_swap, container, false);
     }
 }

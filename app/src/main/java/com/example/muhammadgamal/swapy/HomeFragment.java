@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 public class HomeFragment extends Fragment {
 
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Home");
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
@@ -28,7 +30,7 @@ public class HomeFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         filterDialog = new Dialog(getContext());
-        imgFilter = (ImageView) getView().findViewById(R.id.imgFilter);
+        RelativeLayout imgFilter = (RelativeLayout) getView().findViewById(R.id.imgFilter);
         imgFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

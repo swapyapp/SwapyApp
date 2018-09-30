@@ -13,6 +13,7 @@ public class SentSwapFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        getActivity().setTitle("Sent swap requests");
         return inflater.inflate(R.layout.fragment_sent_swap, container, false);
     }
 }
